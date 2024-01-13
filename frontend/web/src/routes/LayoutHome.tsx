@@ -15,15 +15,11 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
-interface LayoutHomeProps extends React.PropsWithChildren {
-  userName: string;
-}
-
-export default function LayoutHome(props: LayoutHomeProps) {
-  const { userName, children } = props;
+export default function LayoutHome() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
 
@@ -102,7 +98,7 @@ export default function LayoutHome(props: LayoutHomeProps) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            {userName + ` Portfolio site`}
+            {` Portfolio site`}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -153,7 +149,7 @@ export default function LayoutHome(props: LayoutHomeProps) {
         }}
       >
         <Toolbar />
-        {children}
+        <Outlet />
       </Box>
     </Box>
   );
