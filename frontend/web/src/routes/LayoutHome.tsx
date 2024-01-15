@@ -63,7 +63,7 @@ export default function LayoutHome() {
       </List>
       <Divider />
       <List>
-        {["Contact Me", "Other"].map((text, index) => (
+        {["Contact Me", "Other Interests"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
