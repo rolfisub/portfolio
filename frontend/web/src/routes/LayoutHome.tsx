@@ -15,7 +15,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -38,39 +38,50 @@ export default function LayoutHome() {
     }
   };
 
+  const firstSection = [
+    ["Home", "/"],
+    ["Basic Info", "/basic-info"],
+    ["Projects", "/projects"],
+    ["Skills", "/skills"],
+    ["Work Experience", "/work-experience"],
+    ["Education", "/education"],
+  ];
+
+  const secondSection = [
+    ["Contact Me", "/contact-me"],
+    ["Other Interests", "/other-interests"],
+  ];
+
   const drawer = (
     <div>
       <Toolbar />
       <Divider />
       <List>
-        {[
-          "Home",
-          "Basic Info",
-          "Projects",
-          "Skills",
-          "Work Experience",
-          "Education",
-        ].map((text, index) => (
+        {firstSection.map(([text, path], index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+            <Link to={path}>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
       <Divider />
       <List>
-        {["Contact Me", "Other Interests"].map((text, index) => (
+        {secondSection.map(([text, path], index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+            <Link to={path}>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
