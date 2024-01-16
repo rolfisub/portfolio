@@ -1,5 +1,211 @@
 {
-    "projects": [
-        {"id": 1}
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "password": "hashed_password"
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "password": "hashed_password"
+    }
+  ],
+  "basic-info": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "Your Name",
+      "title": "Your Title",
+      "location": "Your Location",
+      "email": "your.email@example.com",
+      "phone": "+1234567890",
+      "website": "https://yourwebsite.com",
+      "summary": "A brief summary about yourself.",
+      "linkedin": "https://www.linkedin.com/in/yourlinkedin",
+      "github": "https://github.com/yourgithub",
+      "twitter": "https://twitter.com/yourtwitter",
+      "example_link": "https://example.com/your-portfolio"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "name": "Your Name",
+      "title": "Your Title",
+      "location": "Your Location",
+      "email": "your.email@example.com",
+      "phone": "+1234567890",
+      "website": "https://yourwebsite.com",
+      "summary": "A brief summary about yourself.",
+      "linkedin": "https://www.linkedin.com/in/yourlinkedin",
+      "github": "https://github.com/yourgithub",
+      "twitter": "https://twitter.com/yourtwitter",
+      "example_link": "https://example.com/your-portfolio"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "Project 1",
+      "description": "Description of Project 1.",
+      "url": "https://example.com/project-1",
+      "explanation": "Explanation about Project 1.",
+      "example_link": "https://example.com/project-1"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "title": "Project 2",
+      "description": "Description of Project 2.",
+      "url": "https://example.com/project-2",
+      "explanation": "Explanation about Project 2.",
+      "example_link": "https://example.com/project-2"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "title": "Project 1",
+      "description": "Description of Project 1.",
+      "url": "https://example.com/project-1",
+      "explanation": "Explanation about Project 1.",
+      "example_link": "https://example.com/project-1"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "title": "Project 2",
+      "description": "Description of Project 2.",
+      "url": "https://example.com/project-2",
+      "explanation": "Explanation about Project 2.",
+      "example_link": "https://example.com/project-2"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "skill": "JavaScript",
+      "explanation": "Explanation about JavaScript.",
+      "example_link": "https://example.com/javascript"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "skill": "React",
+      "explanation": "Explanation about React.",
+      "example_link": "https://example.com/react"
+    },
+    {
+      "id": 1,
+      "user_id": 2,
+      "skill": "JavaScript",
+      "explanation": "Explanation about JavaScript.",
+      "example_link": "https://example.com/javascript"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "skill": "React",
+      "explanation": "Explanation about React.",
+      "example_link": "https://example.com/react"
+    }
+  ],
+  "work-experience": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "position": "Your Position 1",
+      "company": "Company 1",
+      "location": "Location 1",
+      "start_date": "2022-01-01",
+      "end_date": "2022-12-31",
+      "description": "Description about Work Experience 1.",
+      "example_link": "https://example.com/work-experience-1"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "position": "Your Position 2",
+      "company": "Company 2",
+      "location": "Location 2",
+      "start_date": "2023-01-01",
+      "end_date": "2023-12-31",
+      "description": "Description about Work Experience 2.",
+      "example_link": "https://example.com/work-experience-2"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "degree": "Your Degree 1",
+      "school": "School 1",
+      "location": "Location 1",
+      "graduation_date": "2024-05-31",
+      "example_link": "https://example.com/education-1"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "degree": "Your Degree 2",
+      "school": "School 2",
+      "location": "Location 2",
+      "graduation_date": "2025-05-31",
+      "example_link": "https://example.com/education-2"
+    }
+  ],
+  "contact-me": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "email": "your.email@example.com",
+      "phone": "+1234567890",
+      "linkedin": "https://www.linkedin.com/in/yourlinkedin",
+      "github": "https://github.com/yourgithub",
+      "twitter": "https://twitter.com/yourtwitter"
+    }
+  ],
+  "other-interests": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "interests": [
+        {
+          "id": 1,
+          "name": "Interest 1",
+          "description": "Description for Interest 1.",
+          "examples": [
+            {
+              "id": 1,
+              "example_name": "Example 1",
+              "link": "https://example.com/example1"
+            },
+            {
+              "id": 2,
+              "example_name": "Example 2",
+              "link": "https://example.com/example2"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Interest 2",
+          "description": "Description for Interest 2.",
+          "examples": [
+            {
+              "id": 3,
+              "example_name": "Example 3",
+              "link": "https://example.com/example3"
+            },
+            {
+              "id": 4,
+              "example_name": "Example 4",
+              "link": "https://example.com/example4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
