@@ -13,8 +13,8 @@
   ],
   "basic-info": [
     {
-      "id": 1,
-      "user_id": 1,
+      "id": "1",
+      "user_id": "1",
       "name": "Your Name",
       "title": "Your Title",
       "location": "Your Location",
@@ -25,7 +25,8 @@
       "linkedin": "https://www.linkedin.com/in/yourlinkedin",
       "github": "https://github.com/yourgithub",
       "twitter": "https://twitter.com/yourtwitter",
-      "example_link": "https://example.com/your-portfolio"
+      "example_link": "https://example.com/your-portfolio",
+      "picture": "some url"
     },
     {
       "id": 2,
@@ -40,7 +41,8 @@
       "linkedin": "https://www.linkedin.com/in/yourlinkedin",
       "github": "https://github.com/yourgithub",
       "twitter": "https://twitter.com/yourtwitter",
-      "example_link": "https://example.com/your-portfolio"
+      "example_link": "https://example.com/your-portfolio",
+      "picture": "some url"
     }
   ],
   "projects": [

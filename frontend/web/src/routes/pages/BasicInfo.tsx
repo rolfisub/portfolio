@@ -1,5 +1,18 @@
 import React from "react";
+import { useGetBasicInfoByUserQuery } from "../../api/basicInfoApi";
 
 export default function BasicInfo() {
-  return <div>Basic Info</div>;
+  const { data, error, isLoading } = useGetBasicInfoByUserQuery("1");
+
+  return (
+    <div>
+      {error ? (
+        <>Error</>
+      ) : isLoading ? (
+        <>Loading...</>
+      ) : data ? (
+        <>{data?.name}</>
+      ) : null}
+    </div>
+  );
 }
