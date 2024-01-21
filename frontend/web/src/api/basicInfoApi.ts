@@ -21,7 +21,7 @@ export const basicInfoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (builder) => {
     return {
-      getBasicInfoByUser: builder.query<BasicInfoResponse, string>({
+      getBasicInfoByUser: builder.query<BasicInfoResponse, number>({
         query: (userId) => `basic-info/${userId}`,
       }),
     };
