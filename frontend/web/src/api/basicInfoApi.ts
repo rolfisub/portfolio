@@ -22,7 +22,10 @@ export const basicInfoApi = createApi({
   endpoints: (builder) => {
     return {
       getBasicInfoByUser: builder.query<BasicInfoResponse, number>({
-        query: (userId) => `basic-info/${userId}`,
+        query: (userId) => `basic-info?user_id=${userId}`,
+        transformResponse(baseQueryReturnValue: BasicInfoResponse[]) {
+          return baseQueryReturnValue[0];
+        },
       }),
     };
   },
