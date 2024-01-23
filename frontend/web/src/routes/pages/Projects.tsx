@@ -23,13 +23,13 @@ export default function Projects() {
     <Box sx={{ maxWidth: 575 }}>
       <Typography variant="h5">Projects:</Typography>
       {data?.map((project: ProjectResponse) => (
-        <Card>
+        <Card key={project.id}>
           <CardContent>
-          <Typography>{project.title}</Typography>
-          <Typography>{project.description}</Typography>
-          <Typography>{project.explanation}</Typography>
-          <Typography>{project.url}</Typography>
-          <Typography>{project.title}</Typography>
+            <Typography>{project.title}</Typography>
+            <Typography>{project.description}</Typography>
+            <Typography>{project.explanation}</Typography>
+            <Typography>{project.url}</Typography>
+            <Typography>{project.title}</Typography>
           </CardContent>
         </Card>
       ))}
