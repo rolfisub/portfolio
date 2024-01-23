@@ -1,4 +1,5 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi } from "@reduxjs/toolkit/query/react";
+import { getApiBaseQuery } from "./apiHelpers";
 
 export interface BasicInfoResponse {
   id: number;
@@ -18,7 +19,7 @@ export interface BasicInfoResponse {
 
 export const basicInfoApi = createApi({
   reducerPath: "basicInfoApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
+  baseQuery: getApiBaseQuery(),
   endpoints: (builder) => {
     return {
       getBasicInfoByUser: builder.query<BasicInfoResponse, number>({
