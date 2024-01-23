@@ -1,5 +1,8 @@
 import React from "react";
-import { useGetProjectsByUserIdQuery } from "../../api/projectsApi";
+import {
+  ProjectResponse,
+  useGetProjectsByUserIdQuery,
+} from "../../api/projectsApi";
 import { DefaultError } from "../../components/DefaultError";
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import { DefaultLoading } from "../../components/DefaultLoading";
@@ -18,11 +21,18 @@ export default function Projects() {
 
   return (
     <Box sx={{ maxWidth: 575 }}>
-      <Card>
-        <CardContent>
-          <Typography variant="h5">Projects:</Typography>
-        </CardContent>
-      </Card>
+      <Typography variant="h5">Projects:</Typography>
+      {data?.map((project: ProjectResponse) => (
+        <Card>
+          <CardContent>
+          <Typography>{project.title}</Typography>
+          <Typography>{project.description}</Typography>
+          <Typography>{project.explanation}</Typography>
+          <Typography>{project.url}</Typography>
+          <Typography>{project.title}</Typography>
+          </CardContent>
+        </Card>
+      ))}
     </Box>
   );
 }
