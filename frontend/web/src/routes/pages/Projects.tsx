@@ -21,15 +21,17 @@ export default function Projects() {
 
   return (
     <Box sx={{ maxWidth: 575 }}>
-      <Typography variant="h5">Projects:</Typography>
+      <Typography variant="h5" sx={{ margin: 1 }}>
+        Projects:
+      </Typography>
       {data?.map((project: ProjectResponse) => (
-        <Card key={project.id}>
+        <Card key={project.id} variant={"outlined"} sx={{ margin: 1 }}>
           <CardContent>
             <Typography>{project.title}</Typography>
             <Typography>{project.description}</Typography>
             <Typography>{project.explanation}</Typography>
             <Typography>{project.url}</Typography>
-            <Typography>{project.title}</Typography>
+            <Typography>{project.example_link}</Typography>
           </CardContent>
         </Card>
       ))}
