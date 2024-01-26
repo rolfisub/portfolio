@@ -157,17 +157,6 @@
       "example_link": "https://example.com/education-2"
     }
   ],
-  "contact-me": [
-    {
-      "id": 1,
-      "user_id": 1,
-      "email": "your.email@example.com",
-      "phone": "+1234567890",
-      "linkedin": "https://www.linkedin.com/in/yourlinkedin",
-      "github": "https://github.com/yourgithub",
-      "twitter": "https://twitter.com/yourtwitter"
-    }
-  ],
   "other-interests": [
     {
       "id": 1,
