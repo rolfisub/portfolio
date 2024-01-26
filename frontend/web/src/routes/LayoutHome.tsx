@@ -16,6 +16,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link, Outlet } from "react-router-dom";
+import {
+  Email,
+  Folder,
+  Gamepad,
+  House,
+  PersonPinCircle,
+  School,
+  Star,
+  Wallet,
+} from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -52,6 +62,17 @@ export default function LayoutHome() {
     ["Other Interests", "/other-interests"],
   ];
 
+  const iconMap = {
+    Home: <House />,
+    "Basic Info": <PersonPinCircle />,
+    Projects: <Folder />,
+    Skills: <Star />,
+    "Work Experience": <Wallet />,
+    Education: <School />,
+    "Contact Me": <Email />,
+    "Other Interests": <Gamepad />,
+  };
+
   const drawer = (
     <div>
       <Toolbar />
@@ -62,7 +83,7 @@ export default function LayoutHome() {
             <Link to={path}>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {iconMap[text as keyof typeof iconMap]}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -77,7 +98,7 @@ export default function LayoutHome() {
             <Link to={path}>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {iconMap[text as keyof typeof iconMap]}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
